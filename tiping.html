@@ -1,8 +1,41 @@
+<div id="problem"></div>
 <div class="cp_iptxt">
 	<label class="ef">
-	<input type="text" placeholder="お名前">
+	<input type="text" placeholder="answer">
+	<input type="button" value="解答" onclick="answer();" id="answer-text">
 	</label>
 </div>
+<div id="explaination"></div>
+<script>
+    var problem = new Array(
+      "答える",
+      "月曜日",
+      "火曜日"  
+);
+    var right = new Array(
+      "answer",
+      "月曜日",
+      "火曜日"  //最後にコンマは付けない！
+);
+    var params = (new URL(document.location)).searchParams;
+    var problem_num = params.get('p-num');
+    var r_w = localStorage.getItem('r_w' + problem_num );
+    if ( e_w == '1' ) {
+	    
+    } else {
+	    document.getElementById('problem').innerHTML = "No." + problem_num + problem[problem_num] ;
+	    
+    }
+    answer{
+	    const textbox = document.getElementById("answer-text")
+	    const answer_text = textbox.value
+            if ( answer_text == right[problem_num] ) {
+		    document.getElementById('explaination').innerHTML = "正解" ;
+	    } else {
+		    document.getElementById('explaination').innerHTML = "不正解<br>正解：" + right[problem_num] ;
+	    }
+    }
+</script>
 <style>
     .cp_iptxt {
 	position: relative;
