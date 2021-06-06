@@ -18,7 +18,7 @@
     var right = new Array(
       "answer",
       "think",
-      "火曜日"  //最後にコンマは付けない！
+      "火曜日"
 );
     var params = (new URL(document.location)).searchParams;
     var problem_num = params.get('p-num');
@@ -26,7 +26,8 @@
     /*if ( e_w == '1' ) {
 	    
     } else { */
-    var display_p_num = problem_num + 1;
+    var pn = ploblem_num
+    var display_p_num = pn + 1;
     document.getElementById('problem').innerHTML = "No." + display_p_num + problem[problem_num] ;
 	    
     /*}*/
