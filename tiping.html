@@ -20,12 +20,12 @@
     var params = (new URL(document.location)).searchParams;
     var problem_num = params.get('p-num');
     var r_w = localStorage.getItem('r_w' + problem_num );
-    if ( e_w == '1' ) {
+    /*if ( e_w == '1' ) {
 	    
-    } else {
+    } else { */
 	    document.getElementById('problem').innerHTML = "No." + problem_num + problem[problem_num] ;
 	    
-    }
+    /*}*/
     answer{
 	    const textbox = document.getElementById("answer-text")
 	    const answer_text = textbox.value
