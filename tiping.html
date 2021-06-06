@@ -49,7 +49,8 @@
     }
     function next() {
 	var params = (new URL(document.location)).searchParams;
-        var url1 = params.get('p-num') + 1 ;
+	var num_1 = 1;
+        var url1 = params.get('p-num') + num_1 ;
 	var url = 'https://js-gr.github.io/learn/tiping.html?p-num=' + url1 ;
 	location.href = url;
     }
