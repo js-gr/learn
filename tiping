@@ -1,0 +1,80 @@
+<div class="container">
+  <h1>Nice Textbox</h1>
+  <div class="nice-wrap">
+    <input class="nice-textbox" type="text"/>
+    <label class="nice-label" for="Username">Email</label>
+  </div>
+</div>
+<style>
+*{box-sizing: border-box;}
+
+html, body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #3cad7e;
+  font-family: 'Arial', sans-serif;
+}
+
+.container{  
+  h1{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+  }
+}
+
+.nice-wrap{
+  position: relative;
+  width: 500px;
+  height: 100px;
+ 
+  margin: 0 auto;
+}
+
+.nice-label{
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 16px;
+  color: #a0a0a0;
+  transition: all 0.25s ease;
+  
+  &.focus{
+    top: -25px;
+    left: 5px;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+.nice-textbox{
+  position: relative;
+  display: block;
+  width: 500px;
+  margin-top: 50px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #a0a0a0;
+  outline: none;
+}
+</style>
+<script>
+$(document).ready(function(){
+   $('.nice-textbox').blur(function() {
+        if($(this).val().length === 0){
+          $('.nice-label').removeClass("focus");
+        }
+        else { returns; }
+      })
+      .focus(function() {
+        $('.nice-label').addClass("focus")
+      });
+});
+</script>
