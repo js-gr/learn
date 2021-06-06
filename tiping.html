@@ -6,6 +6,7 @@
 	</label>
 </div>
 <div id="explaination"></div>
+<audio id="right_sound" src="./right.mp3"></audio>
 <script>
     var problem = new Array(
       "答える",
@@ -31,6 +32,8 @@
 	    const answer_text = textbox.value
             if ( answer_text == right[problem_num] ) {
 		    document.getElementById('explaination').innerHTML = "正解" ;
+		    const right_sound = document.querySelector("#right_sound");
+		    right_sound.play();
 	    } else {
 		    document.getElementById('explaination').innerHTML = "不正解<br>正解：" + right[problem_num] + answer_text ;
 	    }
