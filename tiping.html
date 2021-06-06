@@ -10,12 +10,12 @@
 <script>
     var problem = new Array(
       "答える",
-      "月曜日",
+      "考える",
       "火曜日"  
 );
     var right = new Array(
       "answer",
-      "月曜日",
+      "think",
       "火曜日"  //最後にコンマは付けない！
 );
     var params = (new URL(document.location)).searchParams;
@@ -24,7 +24,7 @@
     /*if ( e_w == '1' ) {
 	    
     } else { */
-	    document.getElementById('problem').innerHTML = "No." + problem_num + 1 + problem[problem_num] ;
+	    document.getElementById('problem').innerHTML = "No." + problem_num + problem[problem_num] ;
 	    
     /*}*/
     function answer() {
