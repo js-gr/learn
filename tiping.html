@@ -11,6 +11,7 @@
 </div>
 
 <audio id="right_sound" src="./right.mp3"></audio>
+<audio id="wrong_sound" src="./wrong.mp3"></audio>
 <script>
     var problem = new Array(
       "答える",
@@ -39,9 +40,17 @@
 		    const right_sound = document.querySelector("#right_sound");
 		    right_sound.play();
 	    } else {
-		    document.getElementById('explaination').innerHTML = "不正解<br>正解：" + right[problem_num] + answer_text ;
+		    document.getElementById('explaination').innerHTML = "不正解<br>正解：" + right[problem_num] + '<br><input type="button" value="次へ" onclick="next();">' ;
+		    const wrong_sound = document.querySelector("#wrong_sound");
+		    wrong_sound.play();
+		    
 	    }
 	    return false;
+    }
+    function next() {
+	var params = (new URL(document.location)).searchParams;
+        var url1 = params.get('p-num') + 1 ;
+	var url = 'https://js-gr.github.io/learn/tiping.html?p-num=' + url1 ;
     }
 </script>
 <style>
