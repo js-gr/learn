@@ -20,6 +20,7 @@
 );
     var params = (new URL(document.location)).searchParams;
     var problem_num = params.get('p-num');
+    var problem_num = problem_num + 1;
     var r_w = localStorage.getItem('r_w' + problem_num );
     /*if ( e_w == '1' ) {
 	    
