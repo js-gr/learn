@@ -19,12 +19,12 @@
       "火曜日"  //最後にコンマは付けない！
 );
     var params = (new URL(document.location)).searchParams;
-    var problem_num = params.get('p-num') + 1;
+    var problem_num = params.get('p-num');
     var r_w = localStorage.getItem('r_w' + problem_num );
     /*if ( e_w == '1' ) {
 	    
     } else { */
-	    document.getElementById('problem').innerHTML = "No." + problem_num + problem[problem_num] ;
+	    document.getElementById('problem').innerHTML = "No." + problem_num + 1 + problem[problem_num] ;
 	    
     /*}*/
     function answer() {
