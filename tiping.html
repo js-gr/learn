@@ -39,8 +39,7 @@
 		    document.getElementById('explaination').innerHTML = "正解" ;
 		    const right_sound = document.querySelector("#right_sound");
 		    right_sound.play();
-		    sleep(2000);
-		    next();
+		    r_next();
 	    } else {
 		    document.getElementById('explaination').innerHTML = "不正解<br>正解：" + right[problem_num] + '<br><input type="button" value="次へ" onclick="next();">' ;
 		    const wrong_sound = document.querySelector("#wrong_sound");
@@ -48,6 +47,13 @@
 		    
 	    }
 	    return false;
+    }
+    function r_next() {
+	var params = (new URL(document.location)).searchParams;
+	var url1 = parseFloat(params.get('p-num'))
+        var url2 = url1 + 1 ;
+	var url = 'https://js-gr.github.io/learn/tiping.html?p-num=' + url2 ;
+	location.href = url;
     }
     function next() {
 	var params = (new URL(document.location)).searchParams;
