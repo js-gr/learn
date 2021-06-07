@@ -46,13 +46,16 @@
     document.getElementById('problem').innerHTML = '<h1>' + problem[problem_num] + '</h1>' ;
 	    
     /*}*/
+    if ( problem_num == right.length ) {
+	document.getElementById('cp_iptxt').innerHTML =　'<img src="good_job.png" width="300px"><div id="retry><img src="retry.png width="100px"><h1>retry</h1></div>
+    }
     function answer() {
-	    const textbox = document.getElementById("answer-text")
-	    const answer_text = textbox.value
+	    const textbox = document.getElementById("answer-text");
+	    const answer_text = textbox.value;
             if ( answer_text == right[problem_num] ) {
 		    document.getElementById('explaination').innerHTML = "" ;
 		    const right_sound = document.querySelector("#right_sound");
-		    document.getElementById('r_or_w').innerHTML =　'<img src="./right.png" width="200px">'
+		    document.getElementById('r_or_w').innerHTML =　'<img src="./right.png" width="200px">';
 		    right_sound.play();
 		    r_next();
 	    } else {
