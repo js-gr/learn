@@ -47,7 +47,7 @@
 	    const textbox = document.getElementById("answer-text")
 	    const answer_text = textbox.value
             if ( answer_text == right[problem_num] ) {
-		    document.getElementById('explaination').innerHTML = "正解" ;
+		    document.getElementById('explaination').innerHTML = "" ;
 		    const right_sound = document.querySelector("#right_sound");
 		    document.getElementById('r_or_w').innerHTML =　'<img src="./right.png" width="200px">'
 		    right_sound.play();
