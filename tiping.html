@@ -50,9 +50,9 @@
     }
     function next() {
 	var params = (new URL(document.location)).searchParams;
-	var num_1 = 1;
-        var url1 = params.get('p-num') + num_1 ;
-	var url = 'https://js-gr.github.io/learn/tiping.html?p-num=' + url1 ;
+	var url1 = parseFloat(params.get('p-num'))
+        var url2 = url1 + 1 ;
+	var url = 'https://js-gr.github.io/learn/tiping.html?p-num=' + url2 ;
 	location.href = url;
     }
 </script>
