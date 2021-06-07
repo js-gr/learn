@@ -34,6 +34,7 @@
 	"practice",
 	"receive"
 );
+    document.getElementById('answer-text').focus();
     var params = (new URL(document.location)).searchParams;
     var problem_num = params.get('p-num');
     var r_w = localStorage.getItem('r_w' + problem_num );
