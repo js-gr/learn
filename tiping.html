@@ -15,14 +15,24 @@
 <audio id="wrong_sound" src="./wrong.mp3"></audio>
 <script>
     var problem = new Array(
-      "答える",
-      "考える",
-      "火曜日"  
+	"答える",
+	"踊る",
+	"終わる(e)",
+	"忘れる",
+	"聴く",
+	"開く・開ける",
+	"練習する",
+	"受け取る"
 );
     var right = new Array(
-      "answer",
-      "think",
-      "火曜日"
+	"answer",
+	"dance",
+	"end",
+	"forget",
+	"listen",
+	"open",
+	"practice",
+	"receive"
 );
     var params = (new URL(document.location)).searchParams;
     var problem_num = params.get('p-num');
