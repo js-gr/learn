@@ -7,6 +7,7 @@
 	<input type="button" value="解答" onclick="answer();">
 	</label>
 	</form>
+	<div id="r_or_w" style="position: absolute; top: 0;"></div>
 	<div id="explaination"></div>
 </div>
 
@@ -38,6 +39,7 @@
             if ( answer_text == right[problem_num] ) {
 		    document.getElementById('explaination').innerHTML = "正解" ;
 		    const right_sound = document.querySelector("#right_sound");
+		    document.getElementById('r_or_w').innerHTML =　'<img src="./right.png" width="200px">'
 		    right_sound.play();
 		    r_next();
 	    } else {
