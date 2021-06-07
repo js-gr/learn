@@ -39,6 +39,7 @@
 		    document.getElementById('explaination').innerHTML = "正解" ;
 		    const right_sound = document.querySelector("#right_sound");
 		    right_sound.play();
+		    sleep(2000);
 		    next();
 	    } else {
 		    document.getElementById('explaination').innerHTML = "不正解<br>正解：" + right[problem_num] + '<br><input type="button" value="次へ" onclick="next();">' ;
