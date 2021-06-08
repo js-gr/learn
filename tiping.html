@@ -38,7 +38,7 @@
 	
     document.getElementById('answer-text').focus();
     var params = (new URL(document.location)).searchParams;
-    var problem_num = params.get('p-num');
+    var problem_num = params.get('p');
     var r_w = localStorage.getItem('r_w' + problem_num );
     /*if ( e_w == '1' ) {
 	    
@@ -47,7 +47,7 @@
 	    
     /*}*/
     if ( problem_num == right.length ) {
-	document.getElementById('cp_iptxt').innerHTML =　'<img src="good_job.png" width="300px"><div id="retry><img src="retry.png width="100px"><h1>retry</h1></div>';
+	document.getElementById('cp_iptxt').innerHTML =　'<img src="good_job.png" width="300px"><div id="retry" onclick="retry();"><img src="retry.png width="100px"><h1>retry</h1></div>';
     }
     function answer() {
 	    const textbox = document.getElementById("answer-text");
@@ -68,19 +68,22 @@
     }
     function r_next() {
 	var params = (new URL(document.location)).searchParams;
-	var url1 = parseFloat(params.get('p-num'))
+	var url1 = parseFloat(params.get('p'))
         var url2 = url1 + 1 ;
-	var url = 'https://js-gr.github.io/learn/tiping.html?p-num=' + url2 ;
+	var url = 'https://js-gr.github.io/learn/tiping.html?p=' + url2 ;
 	setTimeout(() => {
 		location.href = url;
 	  }, 1000)
     }
     function next() {
 	var params = (new URL(document.location)).searchParams;
-	var url1 = parseFloat(params.get('p-num'))
+	var url1 = parseFloat(params.get('p'))
         var url2 = url1 + 1 ;
-	var url = 'https://js-gr.github.io/learn/tiping.html?p-num=' + url2 ;
+	var url = 'https://js-gr.github.io/learn/tiping.html?p=' + url2 ;
 	location.href = url;
+    }
+    function retry() {
+	    location.href = "https://js-gr.github.io/learn/tiping.html?p=0";
     }
 </script>
 <style>
