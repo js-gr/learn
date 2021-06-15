@@ -61,7 +61,8 @@
 		    document.getElementById('explaination').innerHTML = "不正解<br>正解：" + right[problem_num] + '<br><input type="button" value="次へ" onclick="next();">' ;
 		    const wrong_sound = document.querySelector("#wrong_sound");
 		    wrong_sound.play();
-		    
+		    var box_elem = document.getElementById("ex_box");
+		    box_elem.disabled = true;
 	    }
 	    return false;
     }
